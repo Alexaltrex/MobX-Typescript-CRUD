@@ -1,0 +1,153 @@
+@import "../../assets/scss/app.scss";
+
+.characterItemPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+  .title {
+    @include h1();
+    text-align: center;
+    transition: 0.3s;
+
+    &_isFetching {
+      color: #CCCCCC;
+    }
+  }
+
+  .titleSkeleton {
+    width: 100%;
+    height: 24px;
+
+    @include desktop() {
+      height: 36px;
+    }
+  }
+
+
+  .imageBlock {
+    @include centerRow();
+
+    .imgWrapper {
+      position: relative;
+      margin: 12px 10px 0;
+      box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+      border: 10px solid $color_secondary;
+      background: $color_secondary;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 200px;
+      height: 200px;
+
+      @include desktop() {
+        margin: 24px 20px;
+        width: 300px;
+        height: 300px;
+      }
+
+      img {
+        display: block;
+        width: 200px;
+        height: 200px;
+
+        @include desktop() {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .loading {
+        @include absoluteCenter;
+        z-index: 2;
+      }
+    }
+
+    .btn {
+      background: $color_secondary;
+      color: #FFF;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      &:disabled {
+        background: #CCC;
+        box-shadow: none;
+      }
+    }
+
+  }
+
+  .properties {
+    align-self: stretch;
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 32px;
+    }
+
+  }
+
+  .episodesBlock {
+    align-self: stretch;
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 32px;
+    }
+
+    .countBlock {
+      display: flex;
+      align-items: center;
+
+      & > p {
+        color: $color_primary_dark;
+      }
+
+      & > div {
+        margin-left: 8px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @include centerColumn();
+        background: $color_secondary;
+        color: #FFF;
+      }
+    }
+
+    .list {
+      margin-top: 4px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      overflow: hidden;
+
+      .link {
+        text-decoration: none;
+        color: $color_secondary_dark;
+        padding: 8px 16px;
+        transition: 0.3s;
+        background: #FFF;
+
+        &:hover {
+          background: #CCC;
+        }
+
+        &:nth-child(2n + 1) {
+          background: $color_secondary_dark;
+          color: #FFF;
+
+          &:hover {
+            background: $color_secondary;
+          }
+        }
+      }
+    }
+  }
+}

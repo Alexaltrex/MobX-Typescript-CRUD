@@ -1,0 +1,87 @@
+@mixin tablet {
+  @media all and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin inner() {
+  @include desktop() {
+    width: 1024px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}
+
+@mixin onlyDesktop($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+@mixin onlyMobile($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+@mixin centerRow() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerColumn() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin h1() {
+  color: $color_primary_dark;
+  font-size: 22px;
+
+  @include desktop() {
+    font-size: 36px;
+  }
+}
+
+@mixin button() {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin linearProgressWrapper {
+  height: 10px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include desktop {
+    left: calc(-50vw + 512px);
+    right: calc(-50vw + 512px);
+  }
+}

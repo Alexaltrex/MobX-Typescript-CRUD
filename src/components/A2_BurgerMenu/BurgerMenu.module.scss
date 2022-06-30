@@ -1,0 +1,46 @@
+@import "../../assets/scss/app.scss";
+
+.burgerMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //overflow: hidden;
+  z-index: 100;
+  transform: translateX(100%);
+
+  .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color_secondary;
+    transition: 0.3s;
+    padding-top: 50px;
+    box-sizing: border-box;
+    @include centerColumn();
+
+    @include desktop() {
+      padding-top: 65px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: $color_primary_hover;
+
+      &:not(:first-child) {
+        margin-top: 32px;
+      }
+    }
+
+  }
+
+  &_open {
+    .inner {
+      transform: translateX(-100%);
+    }
+  }
+
+}

@@ -1,0 +1,94 @@
+@import "../../../assets/scss/app.scss";
+
+.listOfCharacters {
+
+  .countBlock {
+    display: flex;
+    align-items: center;
+
+    & > p {
+      letter-spacing: -1.0px;
+      color: $color_primary_dark;
+      font-size: 12px;
+
+      @include desktop() {
+        font-size: 16px;
+      }
+
+    }
+
+    & > div {
+      flex-shrink: 0;
+      margin-left: 8px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      @include centerColumn();
+      background: $color_secondary;
+      color: #FFF;
+    }
+  }
+
+  .list {
+    margin-top: 4px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      background: #FFF;
+      transition: 0.3s;
+
+      &:hover {
+        background: #EEE;
+
+        .imgWrapper img {
+          transform: scale(1.2);
+        }
+      }
+
+      .imgWrapper {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          display: block;
+          width: 50px;
+          height: 50px;
+          transition: 0.3s;
+        }
+      }
+
+
+
+      p {
+        margin-left: 16px;
+        color: $color_secondary_dark;
+        font-size: 12px;
+        letter-spacing: -1px;
+
+        @include desktop() {
+          font-size: 16px;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        background: $color_secondary;
+
+        p {
+          color: #FFF;
+        }
+
+        &:hover {
+          background: $color_secondary_dark;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../assets/scss/app.scss";
+
+.episodeItemPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+  .titleBlock {
+    display: flex;
+    align-items: center;
+
+
+    .titleWrapper {
+      flex-grow: 1;
+
+      .title {
+        @include h1();
+        text-align: center;
+        letter-spacing: -1px;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop() {
+          display: block;
+          text-align: center;
+        }
+
+        span:nth-child(2) {
+          display: none;
+
+          @include desktop() {
+            display: inline-flex;
+          }
+        }
+      }
+
+      .air {
+        margin-top: 8px;
+        text-align: center;
+      }
+    }
+
+
+
+    .btn {
+      background: $color_secondary;
+      color: #FFF;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      &:disabled {
+        background: #CCC;
+        box-shadow: none;
+      }
+    }
+
+  }
+
+
+  .residents {
+    margin-top: 18px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+  }
+
+}

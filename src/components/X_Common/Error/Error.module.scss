@@ -1,0 +1,44 @@
+@import "../../../assets/scss/app.scss";
+
+.errorBlock {
+  @include centerColumn;
+  position: absolute;
+  @include absoluteCenter;
+  padding: 10px;
+  max-width: calc(100vw - 32px);
+  background: rgba(255,0,0,0.9);
+  border-radius: 10px;
+
+  .titleBlock {
+    @include centerRow;
+
+    .icon {
+      color: #FFF;
+      font-size: 22px;
+
+      @include desktop() {
+        font-size: 36px;
+      }
+    }
+
+
+    h1 {
+      @include h1;
+      color: #FFF;
+      margin-left: 10px;
+
+    }
+  }
+
+  .message {
+    margin-top: 10px;
+    color: #FFF;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 10px;
+    text-transform: none;
+    white-space: nowrap;
+  }
+}

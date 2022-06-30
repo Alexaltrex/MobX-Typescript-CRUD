@@ -1,0 +1,44 @@
+@import "../../../assets/scss/app.scss";
+
+.productForm {
+
+  .openBtn {
+    border-radius: 100px;
+    text-transform: none;
+  }
+
+  .form {
+    margin-top: 12px;
+
+    @include desktop() {
+      margin-top: 16px;
+    }
+
+    .field {
+      background: #FFF;
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-top: 8px;
+
+        @include desktop() {
+          margin-top: 12px;
+        }
+      }
+    }
+
+    .submit {
+      border-radius: 100px;
+      text-transform: none;
+      width: 100%;
+      margin-top: 8px;
+
+      @include desktop() {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+
+

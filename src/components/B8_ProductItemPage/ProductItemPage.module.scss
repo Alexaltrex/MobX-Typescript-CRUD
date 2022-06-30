@@ -1,0 +1,76 @@
+@import "../../assets/scss/app.scss";
+
+.productItemPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+  .titleWrapper {
+    display: flex;
+
+    .link {
+      text-decoration: none;
+      white-space: pre-wrap;
+      @include h1();
+      margin-left: 12px;
+
+      @include desktop() {
+        margin-left: 16px;
+      }
+    }
+
+    .title {
+      @include h1();
+    }
+  }
+
+  .properties {
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 32px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px;
+      border-radius: 100px;
+
+      &:nth-child(odd) {
+        background: $color_secondary;
+
+        p {
+          background: $color_primary_hover;
+          color: $color_secondary_dark;
+        }
+      }
+
+      &:nth-child(even) {
+        p {
+          background: $color_secondary;
+          color: #FFF;
+        }
+      }
+
+      p {
+        padding: 8px;
+        border-radius: 100px;
+        font-size: 12px;
+
+        @include desktop() {
+          padding: 8px 12px;
+          font-size: 16px;
+        }
+      }
+
+    }
+  }
+
+  .form {
+    margin-top: 32px;
+  }
+
+}

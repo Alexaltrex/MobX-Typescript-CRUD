@@ -1,0 +1,84 @@
+@import "../../assets/scss/app.scss";
+
+.locationItemPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+
+  .titleBlock {
+    display: flex;
+    align-items: center;
+
+    .title {
+      flex-grow: 1;
+      @include h1();
+      text-align: center;
+      letter-spacing: -1px;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background: $color_secondary;
+      color: #FFF;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      &:disabled {
+        background: #CCC;
+        box-shadow: none;
+      }
+    }
+
+  }
+
+  .infoBlock {
+    margin-top: 18px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #FFF;
+      padding: 12px;
+
+      &:first-child {
+        background: $color_secondary;
+        border-radius: 8px 8px 0 0;
+      }
+
+      &:last-child {
+        background: $color_primary_dark;
+        border-radius: 0 0 8px 8px;
+      }
+
+      p {
+        font-size: 12px;
+        letter-spacing: -1px;
+
+        @include desktop() {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+
+  .residents {
+    margin-top: 18px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+  }
+
+}

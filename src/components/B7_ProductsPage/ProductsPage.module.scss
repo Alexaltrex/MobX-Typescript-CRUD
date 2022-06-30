@@ -1,0 +1,58 @@
+@import "../../assets/scss/app.scss";
+
+.productsPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+  .title {
+    @include h1();
+  }
+
+  .items {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      .link {
+        text-decoration: none;
+        padding: 8px 16px;
+        background: $color_secondary;
+        color: #FFF;
+        border-radius: 100px;
+      }
+
+      .deleteBtn {
+        background-color: #d32f2f;
+        margin-left: 12px;
+
+        &:disabled {
+          background-color: #CCC;
+        }
+
+      }
+    }
+
+
+
+  }
+
+  .form {
+    margin-top: 32px;
+  }
+
+}

@@ -1,0 +1,69 @@
+@import "../../assets/scss/app.scss";
+
+.locationsPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+  .title {
+    @include h1();
+  }
+
+  .pagination {
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+  }
+
+  .list {
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+
+    .listHeader {
+      padding: 8px 16px;
+      background: $color_primary_dark;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      color: #FFF;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .item {
+      cursor: pointer;
+      padding: 8px 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 10px;
+      color: #000;
+      text-decoration: none;
+      transition: 0.2s;
+      background: #FFF;
+
+      @include desktop() {
+        font-size: 12px;
+      }
+
+      &:hover {
+        background: #CCC;
+      }
+
+      &:nth-child(2n) {
+        background: $color_secondary_dark;
+        color: #FFF;
+
+        &:hover {
+          background: $color_secondary;
+        }
+      }
+
+    }
+
+  }
+
+}

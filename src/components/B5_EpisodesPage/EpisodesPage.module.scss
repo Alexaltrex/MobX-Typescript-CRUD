@@ -1,0 +1,63 @@
+@import "../../assets/scss/app.scss";
+
+.episodesPage {
+
+  .linearProgressWrapper {
+    @include linearProgressWrapper;
+  }
+
+
+  .title {
+    @include h1();
+  }
+
+  .pagination {
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+
+    @include desktop() {
+      margin-top: 24px;
+    }
+
+    .link {
+      color: #FFF;
+      padding: 8px 16px;
+      text-decoration: none;
+      letter-spacing: -1px;
+      font-size: 12px;
+      background: $color_secondary;
+      transition: 0.3s;
+
+      @include desktop() {
+        font-size: 16px;
+      }
+
+      &:hover {
+        background: $color_secondary_dark;
+      }
+
+      &:nth-child(2n) {
+        background: #FFF;
+        color: $color_secondary_dark;
+
+        &:hover {
+          background: $color_primary;
+        }
+      }
+    }
+
+
+  }
+
+
+
+}

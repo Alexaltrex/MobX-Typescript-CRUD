@@ -1,0 +1,41 @@
+@import "../../../assets/scss/app.scss";
+
+.propertyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  border-radius: 100px;
+
+  &:nth-child(odd) {
+    background: $color_secondary;
+
+    p, button {
+      background: $color_primary_hover;
+      color: $color_secondary_dark;
+    }
+  }
+
+  &:nth-child(even) {
+    p, button {
+      background: $color_secondary;
+      color: #FFF;
+    }
+  }
+
+  p, button {
+    padding: 8px;
+    border-radius: 100px;
+    font-size: 12px;
+
+    @include desktop() {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+
+  button {
+    @include button();
+    text-decoration: underline;
+  }
+}

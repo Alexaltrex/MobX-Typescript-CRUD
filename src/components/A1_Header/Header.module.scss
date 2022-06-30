@@ -1,0 +1,111 @@
+@import "../../assets/scss/app.scss";
+
+.header {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+
+    @include desktop() {
+        height: 65px;
+    }
+
+    .hidable {
+        width: 100%;
+        height: 100%;
+        background-color: #645755;
+        transition: 0.3s;
+
+        &_hide {
+            transform: translateY(-101%);
+        }
+    }
+
+    .inner {
+        height: 100%;
+        @include inner();
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            img {
+                transition: 0.3s;
+                width: 40px;
+                height: 40px;
+
+                @include desktop {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            p {
+                transition: 0.3s;
+                margin-left: 10px;
+                color: $color_primary;
+                font-size: 16px;
+
+                @include desktop {
+                    font-size: 24px;
+                }
+            }
+
+            &:hover {
+                img {
+                    transform: rotateY(180deg);
+                }
+                p {
+                    color: $color_primary_hover;
+                }
+            }
+        }
+
+        .links {
+            @include onlyDesktop(flex){
+                align-self: stretch;
+            }
+
+            .link {
+                text-decoration: none;
+                @include centerRow();
+
+                span {
+                    color: $color_primary;
+                    letter-spacing: -1px;
+                    transition: 0.3s;
+                }
+
+                &_selected {
+                    span {
+                        color: $color_primary_hover;
+                    }
+                }
+
+                &:not(:first-child) {
+                    margin-left: 20px;
+                }
+
+                &:hover {
+                    span {
+                        color: $color_primary_hover;
+                    }
+                }
+            }
+
+        }
+
+        .burger {
+            @include onlyMobile(flex);
+            color: $color_primary;
+        }
+
+    }
+}
