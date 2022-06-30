@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MobX-Typescript-CRUD/static/css/main.9b8a565b.css",
+    "main.js": "/MobX-Typescript-CRUD/static/js/main.20e89ed8.js",
+    "static/js/787.13c87857.chunk.js": "/MobX-Typescript-CRUD/static/js/787.13c87857.chunk.js",
+    "static/media/characters.jpg": "/MobX-Typescript-CRUD/static/media/characters.3321a2a956a619db97c1.jpg",
+    "static/media/episodes.jpg": "/MobX-Typescript-CRUD/static/media/episodes.695951d7b05be5f294cb.jpg",
+    "static/media/locations.jpg": "/MobX-Typescript-CRUD/static/media/locations.19f27fe8302d23f7fde8.jpg",
+    "static/media/crud.jpg": "/MobX-Typescript-CRUD/static/media/crud.18942017e6f0617d89b9.jpg",
+    "static/media/logo.png": "/MobX-Typescript-CRUD/static/media/logo.d60f3ccb4b2654017a93.png",
+    "static/media/bgr.jpg": "/MobX-Typescript-CRUD/static/media/bgr.a88ffd449ecf43ab7adc.jpg",
+    "index.html": "/MobX-Typescript-CRUD/index.html",
+    "main.9b8a565b.css.map": "/MobX-Typescript-CRUD/static/css/main.9b8a565b.css.map",
+    "main.20e89ed8.js.map": "/MobX-Typescript-CRUD/static/js/main.20e89ed8.js.map",
+    "787.13c87857.chunk.js.map": "/MobX-Typescript-CRUD/static/js/787.13c87857.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b8a565b.css",
+    "static/js/main.20e89ed8.js"
+  ]
+}
