@@ -1,8 +1,8 @@
 # MobX-Typescript-CRUD
-* link: https://alexaltrex.github.io/MobX-Typescript-CRUD/
-* api: https://alexaltrex-common-api.herokuapp.com/rtkquery/product/
+* Link: https://alexaltrex.github.io/MobX-Typescript-CRUD/
+* API (for CRUD): https://alexaltrex-common-api.herokuapp.com/rtkquery/product/
 
 # Description
 FullStack project. 
 * Frontend - React, MobX
-* Backend (for products): Node.js, Express.
+* Backend (for CRUD): Node.js, Express.
