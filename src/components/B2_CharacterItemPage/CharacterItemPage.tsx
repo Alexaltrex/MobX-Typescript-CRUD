@@ -128,7 +128,7 @@ export const CharacterItemPage = observer(() => {
                                         episodes.map(episode => (
                                             <Link key={episode.id}
                                                   className={style.link}
-                                                  to={`/episodes/${episode.id}`}
+                                                  to={`/episode/${episode.id}`}
                                             >
                                                 {`${episode.episode} - ${episode.name}`}
                                             </Link>
