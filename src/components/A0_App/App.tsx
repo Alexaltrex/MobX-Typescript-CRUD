@@ -58,7 +58,7 @@ export const App = observer(() => {
     const onScrollHandler = (e: any) => {
         if (ref && ref.current) {
             const newScrollTop = ref.current.scrollTop;
-            if (newScrollTop > scrollTop) {
+            if (newScrollTop > scrollTop && newScrollTop > 60) {
                 setHideHeader(true);
             } else {
                 setHideHeader(false);
