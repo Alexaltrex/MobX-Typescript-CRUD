@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MobX-Typescript-CRUD/static/css/main.70589be3.css",
-    "main.js": "/MobX-Typescript-CRUD/static/js/main.fdacc336.js",
+    "main.js": "/MobX-Typescript-CRUD/static/js/main.644f68a5.js",
     "static/js/787.13c87857.chunk.js": "/MobX-Typescript-CRUD/static/js/787.13c87857.chunk.js",
     "static/media/characters.jpg": "/MobX-Typescript-CRUD/static/media/characters.3321a2a956a619db97c1.jpg",
     "static/media/episodes.jpg": "/MobX-Typescript-CRUD/static/media/episodes.695951d7b05be5f294cb.jpg",
@@ -11,11 +11,11 @@
     "static/media/bgr.jpg": "/MobX-Typescript-CRUD/static/media/bgr.a88ffd449ecf43ab7adc.jpg",
     "index.html": "/MobX-Typescript-CRUD/index.html",
     "main.70589be3.css.map": "/MobX-Typescript-CRUD/static/css/main.70589be3.css.map",
-    "main.fdacc336.js.map": "/MobX-Typescript-CRUD/static/js/main.fdacc336.js.map",
+    "main.644f68a5.js.map": "/MobX-Typescript-CRUD/static/js/main.644f68a5.js.map",
     "787.13c87857.chunk.js.map": "/MobX-Typescript-CRUD/static/js/787.13c87857.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70589be3.css",
-    "static/js/main.fdacc336.js"
+    "static/js/main.644f68a5.js"
   ]
 }
